@@ -3,7 +3,6 @@
 <html>
 <head>
     <title>Iniciar sesión</title>
-    <!-- Asegúrate de incluir Bootstrap en tu proyecto -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>

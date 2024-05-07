@@ -25,7 +25,7 @@ public class UsuarioServicio implements SesionUsuarioDetalles {
 
 	public Usuario registrar() {
 		
-		Usuario user = new Usuario("Tomas", "Rojas", "tomasrr", "1234", Arrays.asList(new Rol("ROLE_ADMIN")));
+		Usuario user = new Usuario("Usuario", "Parqueadero", "admin", "1234", Arrays.asList(new Rol("ROLE_ADMIN")));
 		
 		return usuarioRepositorio.save(user);
 	}
