@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Bienvenido</h1>
+<h1>Hola mundo</h1>
 <a href="logout">Cerrar sesion</a>
 </body>
 </html>
