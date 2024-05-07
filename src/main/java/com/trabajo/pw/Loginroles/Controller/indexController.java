@@ -32,8 +32,7 @@ public class indexController {
 	public String LoginPage() {
 		return "login";
 	}
-	
-	//ENVIAR EN EL FORMULARIO DE LOGIN
+
 	@PostMapping("/login")
 	public String login(@RequestParam("username") String username, @RequestParam("password") String password, Model model) {
         try {
@@ -43,12 +42,10 @@ public class indexController {
                 // Autenticación exitosa, redirigir al usuario a la página de inicio
                 return "redirect:/user";
             } else {
-                // La contraseña es incorrecta, mostrar un mensaje de error
                 model.addAttribute("error", "Nombre de usuario o contraseña incorrectos");
                 return "login";
             }
         } catch (UsernameNotFoundException e) {
-            // El nombre de usuario no existe, mostrar un mensaje de error
             model.addAttribute("error", "Nombre de usuario o contraseña incorrectos");
             return "login";
         }

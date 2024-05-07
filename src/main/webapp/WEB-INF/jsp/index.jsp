@@ -8,11 +8,9 @@
 </head>
 <body>
 
-<h1>Hellow world</h1>
+<h1>Bienvenido</h1>
 
-
-
-<a href="login"><button>CLICK AQUI PARA INICIAR SESION</button> </a>
+<a href="login"><button>INICIAR SESION</button> </a>
 
 </body>
 </html>

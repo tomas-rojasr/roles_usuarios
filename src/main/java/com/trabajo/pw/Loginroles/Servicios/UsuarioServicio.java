@@ -25,7 +25,7 @@ public class UsuarioServicio implements SesionUsuarioDetalles {
 
 	public Usuario registrar() {
 		
-		Usuario user = new Usuario("Usuario", "Parqueadero", "admin", "1234", Arrays.asList(new Rol("ROLE_ADMIN")));
+		Usuario user = new Usuario("Tomas", "Rojas", "tomasrr", "1234", Arrays.asList(new Rol("ROLE_ADMIN")));
 		
 		return usuarioRepositorio.save(user);
 	}
@@ -39,11 +39,9 @@ public class UsuarioServicio implements SesionUsuarioDetalles {
 		return usuarioRepositorio.findAll();
 	}
 	
-	// LA MAGIA DEL LOGIN
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		
-		//Buscar el usuario
 		Usuario user = usuarioRepositorio.findByUsername(username);
 		
 		if(user == null) {
@@ -51,7 +49,6 @@ public class UsuarioServicio implements SesionUsuarioDetalles {
 			throw new UsernameNotFoundException("USUARIO Y CONTRASEÑA NO VALIDOS");
 		}
 		
-		// Con este vamos a obtener la autenticacion --- Va a ser el objeto de sesion
 		return new User(user.getUsername(), user.getPassword(), obtenerRol(user.getRoles()));
 
 		

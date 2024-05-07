@@ -14,10 +14,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-// ASI SE DEFINE UNA ENTIDAD O TABLA PARA LA BASE DE DATOS
-
 @Entity
-//EL ERRO ESTABA EN EL CONSTRAINT PERO ME SORPRENDE QUE A MI NO ME SALGA NINGN ERROR DE ESOS
+
 @Table(name = "usuario", uniqueConstraints = @UniqueConstraint(columnNames = "username"))
 public class Usuario {
 	
@@ -33,7 +31,6 @@ public class Usuario {
 	
 	private String password;
 	
-	//hacemos la relacion
 	
 	@ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	@JoinTable(
